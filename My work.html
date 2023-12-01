@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My work</title>
+  <style>
+  * {
+  box-sizing:border-box;
+  border:0px solid #363636;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 50vh;
+  background:#363636;
+  position: absolute;
+  right:-130px;
+  top:100px;
+}
+
+ul {
+  display: flex;
+  width: calc(80% - 2rem);
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+li {
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.2s ease;
+}
+
+ul:is(:hover, :focus-within) img {
+  opacity: calc(0.1 + (var(--active-lerp, 0) * 0.9));
+  filter: grayscale(calc(1 - var(--active-lerp, 0)));
+}
+
+:root {
+  --lerp-0: 1;
+  --lerp-1: 0.5787037;
+  --lerp-2: 0.2962963;
+  --lerp-3: 0.125;
+  --lerp-4: 0.037037;
+  --lerp-5: 0.0046296;
+  --lerp-6: 0;
+}
+
+a {
+  outline-offset: 4px;
+}
+
+li {
+  flex: calc(0.1 + (var(--active-lerp, 0) * 1));
+  transition: flex 0.2s ease;
+  width:170px;
+ 
+}
+
+li:is(:hover, :focus-within) {
+  --active-lerp: var(--lerp-0);
+  z-index: 7;
+  
+}
+li:has( + li:is(:hover, :focus-within)),
+li:is(:hover, :focus-within) + li {
+  --active-lerp: var(--lerp-1);
+  z-index: 6;
+}
+li:has( + li + li:is(:hover, :focus-within)),
+li:is(:hover, :focus-within) + li + li {
+  --active-lerp: var(--lerp-2);
+  z-index: 5;
+}
+li:has( + li + li + li:is(:hover, :focus-within)),
+li:is(:hover, :focus-within) + li + li + li {
+  --active-lerp: var(--lerp-3);
+  z-index: 4;
+}
+li:has( + li + li + li + li:is(:hover, :focus-within)),
+li:is(:hover, :focus-within) + li + li + li + li {
+  --active-lerp: var(--lerp-4);
+  z-index: 3;
+}
+li:has( + li + li + li + li + li:is(:hover, :focus-within)),
+li:is(:hover, :focus-within) + li + li + li + li + li {
+  --active-lerp: var(--lerp-5);
+  z-index: 2;
+}
+li:has( + li + li + li + li + li + li:is(:hover, :focus-within)),
+li:is(:hover, :focus-within) + li + li + li + li + li + li {
+  --active-lerp: var(--lerp-6);
+  z-index: 1;
+}
+b{
+  font-size:70px;
+  position: absolute;
+  left:420px;
+  top:-80px;
+  color:gold;
+}
+  
+  
+     </style>
+     </head>
+    <body><center><b>My Work</b></center><br>
+     <br><br> <ul class="results">
+  <li class="result">
+    <a href="#"><img src="/project/IMG_20231115_194333.jpg" width="500" height="500" alt=""></a>
+  </li>
+  <li class="result">
+    <a href="#"><img src="/project/IMG_20231115_142239.jpg" width="500" height="500" alt=""></a>
+  </li>
+  <li class="result">
+    <a href="#"><img src="/project/IMG_20231115_142301.jpg" width="500" height="500" alt=""></a>
+  </li>
+  <li class="result">
+    <a href="#"><img src="/project/IMG_20231115_142326.jpg" width="500" height="500" alt=""></a>
+  </li>
+  <li class="result">
+    <a href="#"><img src="/project/IMG_20231115_142348.jpg" width="500" height="500" alt=""></a>
+  </li>
+  <li class="result">
+    <a href="#"><img src="/project/IMG_20231115_142409.jpg" width="500" height="500" alt=""></a>
+  </li>
+  <li class="result">
+    <a href="#"><img src="/project/IMG_20231115_142432.jpg" height="500" alt=""></a>
+  </li>
+</ul>
+</body>
+
+</html>
